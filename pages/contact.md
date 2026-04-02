@@ -1,9 +1,13 @@
 ---
 layout              : page
 title               : "Contact"
-meta_title          : "Contact and use our contact form"
-subheadline         : "Contact Form"
-teaser              : "Get in touch with me? Use the contact form."
+meta_title          : "Contact me"
+subheadline         : "Contact Information"
+teaser              : "Want to get in touch? Feel free to reach out!"
 permalink           : "/contact/"
 ---
-If you need a fabulous contact form for your website, I suggest you use the free version of [Wufoo](http://www.wufoo.com/)
+Email: [benprobison@gmail.com](mailto:benprobison@gmail.com)
+LinkedIn: [benprobison](https://linkedin.com/in/benprobison)
+GitHub: [Ae0lis](https://github.com/Ae0lis)
+Twitter: [Ae0lis](https://twitter.com/Ae0lis)
+YouTube: [Ae0lis](https://youtube.com/@ae0l1s)
