@@ -8,7 +8,11 @@
   dropdown:
   - title: "Blog Archive"
     url: "/blog/archive/"
-
+    
+- title: About me
+  url: "/about/"
+  side: left
+  
 - title: Portfolio
   url: "/portfolio/
   side: left
