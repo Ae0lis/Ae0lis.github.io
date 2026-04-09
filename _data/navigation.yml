@@ -2,6 +2,10 @@
   url: "/"
   side: left
 
+- title: About me
+  url: "/about/"
+  side: left
+
 - title: Blog
   url: "/blog/"
   side: left
@@ -9,9 +13,6 @@
   - title: "Blog Archive"
     url: "/blog/archive/"
     
-- title: About me
-  url: "/about/"
-  side: left
 
 - title: "Search"
   url: "/search/"
