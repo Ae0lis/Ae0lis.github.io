@@ -9,6 +9,10 @@
   - title: "Blog Archive"
     url: "/blog/archive/"
 
+- title: Portfolio
+  url: "/portfolio/
+  side: left
+
 - title: "Search"
   url: "/search/"
   side: right
