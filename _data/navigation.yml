@@ -2,6 +2,10 @@
   url: "/"
   side: left
 
+- title: "Portfolio"
+  url: "/portfolio/"
+  side: left
+
 - title: About me
   url: "/about/"
   side: left
