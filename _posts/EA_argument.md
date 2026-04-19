@@ -22,3 +22,4 @@ image:
     caption_url: https://blaz.photography/
 mediaplayer: true
 ---
+Let's see if I can get any of this to work. I would quite like to start blogging.
