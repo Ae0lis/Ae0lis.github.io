@@ -1,15 +1,14 @@
 ---
 layout: page
-title: "About"
-subheadline: "Why another Jekyll Theme?"
-teaser: "Since years I am programming and designing websites. I love to work with open source tools and learn via code from others. This time I want to try to give something back..."
+title: "About Me"
+subheadline: "Who am I?"
+teaser: "Who made this website, anyways?"
 permalink: "/about/"
 header:
     image_fullwidth: "header_drop.jpg"
 ---
-...and learn at the same time.
 
-*Feeling Responsive* is my first theme which I let into the world. It's built on work and knowledge of others. While I am still designing it, you read about whats behind this theme in the – *hopefully* – near future.
+Hey there! My name is Ben Robison, and I'm an Electrical and Computer Engineering student at the University of Washington. I'm interested in both analog and digital VLSI, including FPGA design, computer architecture and ASIC design. This website is something I made to showcase some of the things I've built. I hope you enjoy poking around! The rest of this page is a high-level summary of my career so far - kind of like a resume, but a bit more in depth. If you're just looking for my resume, check the page [here][1]!
 
 
 ## Features
@@ -39,7 +38,7 @@ Please make *Feeling Responsive* yours and if you like it, please link back to m
 Yours sincerelly, [Moritz »mo.« Sauer][7]
 
 
- [1]: http://mademistakes.com/about/
+ [1]: https://ae0lis.github.io/
  [2]: http://mademistakes.com/work/jekyll-themes/
  [3]: http://automattic.com/
  [4]: http://alistapart.com/
