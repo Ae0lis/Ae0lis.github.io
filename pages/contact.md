@@ -2,7 +2,6 @@
 layout              : page
 title               : "Contact"
 meta_title          : "Contact me"
-subheadline         : "Contact Information"
 teaser              : "Want to get in touch? Feel free to reach out!"
 permalink           : "/contact/"
 ---
