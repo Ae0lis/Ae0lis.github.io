@@ -8,7 +8,7 @@ header:
     image_fullwidth: "header_drop.jpg"
 ---
 
-<!-- {% assign projects = site.projects | sort: "order" %}
+{% assign projects = site.projects | sort: "order" %}
 <div class="row">
 {% for project in projects %}
   <div class="medium-6 large-4 columns b30">
@@ -22,4 +22,4 @@ header:
     {% endif %}
   </div>
 {% endfor %}
-</div> -->
+</div>

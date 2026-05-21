@@ -35,6 +35,19 @@ format: post
 			</p>
 			{% endif %}
 
+			{% if page.tagline %}<p class="teaser">{{ page.tagline }}</p>{% endif %}
+			<p>
+				<strong>{{ page.role }}</strong>
+				{% if page.organization %} · {{ page.organization }}{% endif %}
+				{% if page.date_range %} · {{ page.date_range }}{% endif %}
+			</p>
+			{% if page.tech %}
+			<p>
+				{% for t in page.tech %}<span class="label">{{ t }}</span> {% endfor %}
+			</p>
+			{% endif %}
+			{% if page.repo %}<p><a class="button radius small" href="{{ page.repo }}">View on GitHub</a></p>{% endif %}
+
 			<div itemprop="articleSection">
 			{{ content }}
 			</div>

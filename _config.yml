@@ -50,6 +50,11 @@ plugins:
     - jekyll-gist
     - jekyll-paginate
 
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
 
 #       ____              _             __  _
 #      / __ \____ _____ _(_)___  ____ _/ /_(_)___  ____
@@ -122,6 +127,13 @@ defaults:
       # sidebar:        # Possible values › left, right › by default there will be no sidebar
       comments: false
       author: Ae0lis     # Default author for posts
+  -                      
+    scope:
+      path: ''
+      type: 'projects'
+    values:
+      layout: 'project'
+      author: Ae0lis
 
 
 
