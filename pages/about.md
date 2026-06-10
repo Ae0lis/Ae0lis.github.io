@@ -17,7 +17,7 @@ Hey there! My name is Ben Robison, and I'm an Electrical and Computer Engineerin
 * Sensors, Energy, and Automation Lab (SEAL)
 
 
-#### Since then, fork it!
+#### Quippy outro!
 
 Yours sincerelly, [Ben Robison][1]
 

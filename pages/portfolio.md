@@ -9,17 +9,41 @@ header:
 ---
 
 {% assign projects = site.projects | sort: "order" %}
-<div class="row">
+<div class="project-grid">
 {% for project in projects %}
-  <div class="medium-6 large-4 columns b30">
-    <a href="{{ project.url }}">
-      <img src="{{ site.urlimg }}{{ project.thumb }}" alt="{{ project.title }}">
-    </a>
-    <h4><a href="{{ project.url }}">{{ project.title }}</a></h4>
-    <p class="teaser">{{ project.tagline }}</p>
-    {% if project.tech %}
-      <p>{% for t in project.tech limit:4 %}<span class="label">{{ t }}</span> {% endfor %}</p>
+  <a class="project-card" href="{{ project.url }}">
+
+    {% if project.thumb and project.thumb != "" %}
+      <div class="project-card__media"
+           style="background-image: url('{{ site.urlimg }}{{ project.thumb }}');"></div>
+    {% else %}
+      <div class="project-card__media project-card__media--placeholder"
+           {% if project.placeholder_color %}style="background-color: {{ project.placeholder_color }};"{% endif %}>
+        <span class="project-card__placeholder-text">
+          {{ project.placeholder_label | default: project.title }}
+        </span>
+      </div>
     {% endif %}
-  </div>
+
+    <div class="project-card__body">
+      <h4 class="project-card__title">{{ project.title }}</h4>
+
+      {% if project.organization or project.date_range %}
+        <p class="project-card__meta">
+          {{ project.organization }}{% if project.organization and project.date_range %} · {% endif %}{{ project.date_range }}
+        </p>
+      {% endif %}
+
+      {% if project.tagline %}
+        <p class="project-card__tagline">{{ project.tagline }}</p>
+      {% endif %}
+
+      {% if project.tech %}
+        <p class="project-card__tags">
+          {% for t in project.tech limit:4 %}<span class="project-card__tag">{{ t }}</span>{% endfor %}
+        </p>
+      {% endif %}
+    </div>
+  </a>
 {% endfor %}
 </div>

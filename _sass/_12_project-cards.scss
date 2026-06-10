@@ -1,0 +1,121 @@
+// =========================================================
+// Project cards — grid of clickable project tiles
+// Styles the markup emitted by the loop in pages/portfolio.md
+// =========================================================
+
+.project-grid {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -0.75rem;        // cancels the per-card horizontal padding
+}
+
+// Each card is a flex item. Three across on large, two on medium,
+// one on small — tweak the percentages if you want a different count.
+.project-card-wrap {
+	width: 100%;
+	padding: 0 0.75rem;
+	margin-bottom: 1.5rem;
+	display: flex;             // lets the inner card stretch to full height
+
+	@media #{$medium-up} {
+		width: 50%;
+	}
+	@media #{$large-up} {
+		width: 33.3333%;
+	}
+}
+
+// The card itself — the whole thing is an <a>, so it's all clickable.
+.project-card {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background: #fff;
+	border: 1px solid #e3e3e3;
+	border-radius: 4px;
+	overflow: hidden;
+	text-decoration: none;
+	color: inherit;
+	transition: box-shadow 0.15s ease, transform 0.15s ease;
+
+	&:hover,
+	&:focus {
+		box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+		transform: translateY(-2px);
+		text-decoration: none;
+	}
+}
+
+// --- Image / placeholder area ---------------------------------
+.project-card__media {
+	position: relative;
+	height: 150px;
+	background-size: cover;
+	background-position: center;
+	background-color: $primary-color;   // fallback if no per-card color set
+}
+
+// Text shown on the colored placeholder when there's no image.
+.project-card__media--placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.project-card__placeholder-text {
+	color: rgba(255, 255, 255, 0.92);
+	font-family: $header-font-family;
+	font-size: 1.5rem;
+	font-weight: bold;
+	letter-spacing: 0.04em;
+	text-align: center;
+	padding: 0 0.75rem;
+}
+
+// --- Card body ------------------------------------------------
+.project-card__body {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;              // pushes the tech tags to the bottom
+	padding: 1rem 1.1rem 1.1rem;
+}
+
+.project-card__title {
+	margin: 0 0 0.35rem;
+	font-size: 1.15rem;
+	line-height: 1.25;
+	color: $header-font-color;
+}
+
+.project-card__tagline {
+	margin: 0 0 0.85rem;
+	font-size: 0.92rem;
+	line-height: 1.4;
+	color: lighten($body-font-color, 18%);
+	flex-grow: 1;              // fills space so tags align across cards
+}
+
+.project-card__meta {
+	font-size: 0.78rem;
+	color: lighten($body-font-color, 28%);
+	margin-bottom: 0.6rem;
+}
+
+// --- Tech tags ------------------------------------------------
+.project-card__tags {
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+}
+
+.project-card__tag {
+	display: inline-block;
+	background: lighten($primary-color, 45%);
+	color: darken($primary-color, 10%);
+	font-size: 0.72rem;
+	line-height: 1;
+	padding: 0.32rem 0.5rem;
+	border-radius: 3px;
+	white-space: nowrap;
+}

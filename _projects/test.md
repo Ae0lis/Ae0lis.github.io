@@ -19,4 +19,6 @@ header_image: "projects/motor-controller-hero.jpg"
 teaser: "Custom motor controller I designed and brought up..."
 featured: true
 order: 1                # lower = earlier in the grid
+placeholder_color: "#2b5797"     # the block's background color
+placeholder_label: "Motor Ctrl"  # short text on the block (falls back to title if omitted
 ---
