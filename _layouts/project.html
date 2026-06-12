@@ -65,8 +65,8 @@ format: page-fullwidth
 
 			{% if page.repo or page.demo %}
 			<p class="project-links">
-				{% if page.repo %}<a class="button radius small" href="{{ page.repo }}">View on GitHub</a>{% endif %}
-				{% if page.demo and page.demo != "" %}<a class="button radius small secondary" href="{{ page.demo }}">Demo</a>{% endif %}
+				{% if page.repo %}<a class="button radius small" href="{{ page.repo }}" target="_blank" rel="noopener noreferrer">View on GitHub</a>{% endif %}
+				{% if page.demo and page.demo != "" %}<a class="button radius small secondary" href="{{ page.demo }}" target="_blank" rel="noopener noreferrer">Demo</a>{% endif %}
 			</p>
 			{% endif %}
 

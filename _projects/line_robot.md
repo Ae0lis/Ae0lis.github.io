@@ -18,7 +18,7 @@ tech:                    # shows as tags; first 4 show on the card
   - Breadboarding
 
 # --- LINKS (optional) ---
-# repo: "https://github.com/Ae0lis/your-repo"   # GitHub button; omit if none
+repo: "https://github.com/Ae0lis/line-following-robot"   # GitHub button; omit if none
 demo: "https://www.youtube.com/watch?v=ZdqaWTLLXEM"  # video/paper/live link -> 2nd button; "" hides it
 
 # --- IMAGES (optional) ---
