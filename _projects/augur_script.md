@@ -21,7 +21,7 @@ demo: ""                 # video/paper/live link -> 2nd button; "" hides it
 # --- IMAGES (optional) ---
 # Files live in images/projects/ ; write only the part AFTER images/
 thumb: ""                # card image, e.g. "projects/myproject-thumb.jpg"
-header_image: "augur-hero.jpg"         # detail-page hero, e.g. "projects/myproject-hero.jpg"
+header_image: "projects/augur-hero.jpg"         # detail-page hero, e.g. "projects/myproject-hero.jpg"
 
 # --- CARD PLACEHOLDER (used only when thumb is empty) ---
 placeholder_color: "#2b5797"   # background of the colored block
