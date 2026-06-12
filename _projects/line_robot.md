@@ -81,7 +81,7 @@ Our robot successfully completed the full track. After calibration the sensors c
 </figure>
 
 The cart wasn't the fastest in the class, and there was one major reason why: length. One of the final turns had the cart draw close to a wall, and because we were using the bulky stock chassis, it scraped against the wall and stalled. There's a video attached below of the specific turn. This clip is from one of the earlier tests, where it didn't turn at all. We did eventually get it to turn passably, but I unfortunately don't have video.
-
+\
 <video controls muted width="560" src="/images/projects/line_robot-turn.mp4"></video>  
 \
 While the final design would eventually right itself, it still stalled for a good deal of time before it completed the turn. This cost us a substantial amount of time compared to our competitors. If I could do this again, I would definitely want to custom print a chassis. Not only would it save us time here, but it would make the robot lighter overall and therefore most likely faster. Still, despite the issues, my team still finished on the leaderboard. Thus, I count this project a success!
