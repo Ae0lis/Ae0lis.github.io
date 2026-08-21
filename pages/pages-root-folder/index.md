@@ -58,8 +58,6 @@ header: false
         <a class="home-card" href="/projects/line_robot/">
           <span class="home-card__type">PCB + controls</span>
           <h3>Line-Following Robot</h3>
-          <p>Designed a seven-channel sensor PCB, assembled the sensing hardware, and tuned the controller through a full-track finish.</p>
-          <span class="home-card__link">Read the project &rarr;</span>
         </a>
       </div>
     </div>
