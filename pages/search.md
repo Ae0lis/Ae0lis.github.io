@@ -1,5 +1,6 @@
 ---
 permalink: /search/
+published: false
 layout: page
 title: "Search"
 sitemap: false

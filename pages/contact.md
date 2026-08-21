@@ -1,5 +1,6 @@
 ---
 layout              : page
+published            : false
 title               : "Contact"
 meta_title          : "Contact me"
 teaser              : "Want to get in touch? Feel free to reach out!"

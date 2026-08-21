@@ -1,52 +1,73 @@
 ---
-#
-# Use the widgets beneath and the content will be
-# inserted automagically in the webpage. To make
-# this work, you have to use › layout: frontpage
-#
-layout: frontpage
-header:
-  image_fullwidth: header_unsplash_12.jpg
-widget1:
-  title: "Blog & Portfolio"
-  url: 'http://phlow.github.io/feeling-responsive/blog/'
-  image: widget-1-302x182.jpg
-  text: 'Every good portfolio website has a blog with fresh news, thoughts and develop&shy;ments of your activities. <em>Feeling Responsive</em> offers you a fully functional blog with an archive page to give readers a quick overview of all your posts.'
-widget2:
-  title: "Why use this theme?"
-  url: 'http://phlow.github.io/feeling-responsive/info/'
-  text: '<em>Feeling Responsive</em> is heavily customizable.<br/>1. Language-Support :)<br/>2. Optimized for speed and it&#39;s responsive.<br/>3. Built on <a href="http://foundation.zurb.com/">Foundation Framework</a>.<br/>4. Seven different Headers.<br/>5. Customizable navigation, footer,...'
-  video: '<a href="#" data-reveal-id="videoModal"><img src="http://phlow.github.io/feeling-responsive/images/start-video-feeling-responsive-302x182.jpg" width="302" height="182" alt=""/></a>'
-widget3:
-  title: "Download Theme"
-  url: 'https://github.com/Phlow/feeling-responsive'
-  image: widget-github-303x182.jpg
-  text: '<em>Feeling Responsive</em> is free and licensed under a MIT License. Make it your own and start building. The code is well-documented and explains you how it works.'
-#
-# Use the call for action to show a button on the frontpage
-#
-# To make internal links, just use a permalink like this
-# url: /getting-started/
-#
-# To style the button in different colors, use no value
-# to use the main color or success, alert or secondary.
-# To change colors see sass/_01_settings_colors.scss
-#
-callforaction:
-  url: https://tinyletter.com/feeling-responsive
-  text: Inform me about new updates and features ›
-  style: alert
+layout: home
+title: "Ben Robison | RTL, FPGA & Embedded Systems"
+meta_description: "UW Electrical and Computer Engineering student building RTL, FPGA, and embedded systems, including a hardware-verified 8x8 GEMM accelerator."
 permalink: /index.html
-#
-# This is a nasty hack to make the navigation highlight
-# this page as active in the topbar navigation
-#
 homepage: true
+header: false
 ---
 
-<div id="videoModal" class="reveal-modal large" data-reveal="">
-  <div class="flex-video widescreen vimeo" style="display: block;">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/3b5zCFSmVvU" frameborder="0" allowfullscreen></iframe>
+<section class="home-hero">
+  <div class="row">
+    <div class="large-8 columns">
+      <p class="home-eyebrow">UW Electrical &amp; Computer Engineering</p>
+      <h1>Ben Robison</h1>
+      <p class="home-lead">I build digital hardware and embedded systems, from synthesizable RTL through board-level integration and verification.</p>
+      <div class="home-actions">
+        <a class="button radius" href="/portfolio/">View projects</a>
+        <a class="button radius secondary" href="/assets/docs/Ben_Robison_Resume.pdf">Resume (PDF)</a>
+        <a class="home-text-link" href="https://github.com/Ae0lis" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="home-text-link" href="mailto:benprobison@gmail.com">Email</a>
+      </div>
+    </div>
   </div>
-  <a class="close-reveal-modal">&#215;</a>
-</div>
+</section>
+
+<section class="home-section">
+  <div class="row">
+    <div class="small-12 columns">
+      <p class="home-eyebrow">Featured project</p>
+      <div class="featured-project">
+        <div class="large-7 columns featured-project__copy">
+          <h2>8x8 GEMM Accelerator on FPGA</h2>
+          <p>A 64-MAC signed INT8 matrix-multiply accelerator built in SystemVerilog, integrated with the ARM processing system on a DE1-SoC, and verified against a Python golden model.</p>
+          <div class="home-metrics">
+            <div><strong>64</strong><span>parallel MACs</span></div>
+            <div><strong>77.48 MHz</strong><span>post-fit Fmax</span></div>
+            <div><strong>9 cycles</strong><span>core operation</span></div>
+            <div><strong>1,000</strong><span>randomized interface tests</span></div>
+          </div>
+          <p class="home-project-links">
+            <a class="button radius small" href="/projects/gemm_accelerator/">Read the project</a>
+            <a class="button radius small secondary" href="https://github.com/Ae0lis/Systolic-Array" target="_blank" rel="noopener noreferrer">View source</a>
+          </p>
+        </div>
+        <div class="large-5 columns featured-project__image">
+          <img src="/images/projects/gemm-de1-soc.jpg" alt="DE1-SoC development board used for the GEMM accelerator">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-section home-section--muted">
+  <div class="row">
+    <div class="small-12 columns">
+      <p class="home-eyebrow">More hardware work</p>
+      <div class="home-card-grid">
+        <a class="home-card" href="/projects/line_robot/">
+          <span class="home-card__type">PCB + controls</span>
+          <h3>Line-Following Robot</h3>
+          <p>Designed a seven-channel sensor PCB, assembled the sensing hardware, and tuned the controller through a full-track finish.</p>
+          <span class="home-card__link">Read the project &rarr;</span>
+        </a>
+        <a class="home-card" href="https://github.com/huskyroboticsteam/HR-pi/blob/main/C_Code/SystemsTesting/Automation/dirtSample.c" target="_blank" rel="noopener noreferrer">
+          <span class="home-card__type">Embedded integration</span>
+          <h3>Husky Robotics</h3>
+          <p>Integrated time-of-flight and Hall-effect sensors into an automated rover auger sequence, alongside wiring, crimping, and soldering.</p>
+          <span class="home-card__link">View the code &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

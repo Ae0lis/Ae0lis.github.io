@@ -18,6 +18,9 @@
 
 {% assign title = title | strip_html | escape | strip_newlines %}
 
+{% capture social_image %}{% if page.image.title %}{{ site.urlimg }}{{ page.image.title }}{% elsif page.header_image %}{{ site.urlimg }}{{ page.header_image }}{% elsif site.og_image %}{{ site.urlimg }}{{ site.og_image }}{% endif %}{% endcapture %}
+{% assign social_image = social_image | strip %}
+
 {% endcapture %}<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ title }}</title>
@@ -61,7 +64,7 @@
 	<meta property="og:locale" content="{% if site.og_locale == nil %}en_EN{% else %}{{ site.og_locale }}{% endif %}">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="{{ site.title }}">
-	{% if page.image.title %}<meta property="og:image" content="{{ site.urlimg }}{{ page.image.title }}">{% endif %}
+	{% if social_image != '' %}<meta property="og:image" content="{{ social_image }}">{% endif %}
 	{% if site.socialmedia.facebook %}<meta property="article:author" content="https://www.facebook.com/{{ site.socialmedia.facebook }}">{% endif %}
 
 
@@ -72,7 +75,7 @@
 	<meta name="twitter:creator" content="{{ site.socialmedia.twitter }}">
 	<meta name="twitter:title" content="{{ title }}">
 	<meta name="twitter:description" content="{{ description }}">
-	{% if page.image.title %}<meta name="twitter:image" content="{{ site.urlimg }}{{ page.image.title }}">{% endif %}
+	{% if social_image != '' %}<meta name="twitter:image" content="{{ social_image }}">{% endif %}
 	{% endif %}
 
 	<link type="text/plain" rel="author" href="{{ url}}/humans.txt">

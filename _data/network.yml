@@ -1,6 +1,11 @@
-- menu_name: "Special Thanks"
+- menu_name: "Elsewhere"
 
-- name: "Based on Feeling Responsive by Phlow"
-  url: "https://github.com/Phlow"
+- name: "GitHub"
+  url: "https://github.com/Ae0lis"
   class: "network-entypo"
-  title: "Based on Feeling Responsive by Phlow"
+  title: "Ben Robison on GitHub"
+
+- name: "LinkedIn"
+  url: "https://linkedin.com/in/benprobison"
+  class: "network-entypo"
+  title: "Ben Robison on LinkedIn"

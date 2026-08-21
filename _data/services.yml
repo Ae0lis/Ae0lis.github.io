@@ -1,17 +1,9 @@
-- menu_name: "Services"
+- menu_name: "Contact"
 
-- name: "Contact"
-  url: "/contact/"
-  title: "Contact"
+- name: "Email"
+  url: "mailto:benprobison@gmail.com"
+  title: "Email Ben Robison"
 
-- name: "RSS"
-  url: "/feed.xml"
-  title: "Subscribe to RSS Feed"
-
-- name: "Atom"
-  url: "/atom.xml"
-  title: "Subscribe to Atom Feed"
-
-- name: "sitemap.xml"
-  url: "/sitemap.xml"
-  title: "Sitemap for Google Webmaster Tools"
+- name: "Resume"
+  url: "/assets/docs/Ben_Robison_Resume.pdf"
+  title: "Download Ben Robison's resume"

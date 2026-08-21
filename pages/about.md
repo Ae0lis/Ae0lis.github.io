@@ -1,5 +1,6 @@
 ---
 layout: page
+published: false
 title: "About Me"
 teaser: "Who made this website, anyways?"
 permalink: "/about/"

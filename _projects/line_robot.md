@@ -8,14 +8,14 @@ order: 10                # grid sort: lower numbers appear first
 
 # --- METADATA STRIP (optional, fill what you can) ---
 status: "complete"         # active | complete | paused  -> colored badge
-role: "PCB design + board bring-up + assembly"     # e.g. "Firmware + board bring-up"
+role: "PCB design + assembly + control tuning"
 organization: "UW coursework"    # e.g. "Husky Robotics", "UW coursework", "Personal"
 date_range: "Feb 2026 – Mar 2026"
 tech:                    # shows as tags; first 4 show on the card
   - KiCad
-  - CAD
+  - PID control
   - Arduino
-  - Breadboarding
+  - Soldering
 
 # --- LINKS (optional) ---
 repo: "https://github.com/Ae0lis/line-following-robot"   # GitHub button; omit if none
@@ -41,7 +41,7 @@ This project was the capstone of EE 201, an introductory electrical engineering 
 
 ## My Role
 
-My team had three members, and with only a month to build, we each wore several hats. For my part, I was responsible for the sensor PCB, board bring-up, configuring the code, and much of the physical build. I designed and laid out the photoresistor sensor board in KiCad. I configured and tuned the Arduino control software, mapping it to my sensor board and dialing in the PID constants against the track. Finally, I soldered the components together and assembled the entire sensing apparatus, including a last-minute cardboard light shield to improve sensor reading accuracy.
+My team had three members, and with only a month to build, we each wore several hats. For my part, I was responsible for the sensor PCB, board testing, configuring the code, and much of the physical build. I designed and laid out the photoresistor sensor board in KiCad. I configured and tuned the Arduino control software, mapping it to my sensor board and dialing in the PID constants against the track. Finally, I soldered the components together and assembled the entire sensing apparatus, including a last-minute cardboard light shield to improve sensor reading accuracy.
 
 ## Approach
 
@@ -54,7 +54,7 @@ The robot breaks down into three systems: a custom sensor array that reads the l
 
 ### Sensing
 
-This was the custom PCB. The robot's steering system takes input from a seven-channel photoresistor array that I personally designed and laid out as a custom PCB in KiCad. Each of the seven channels has a photoresistor and an LED to ensure the photoresistor encounters minimal noise from ambient light variations. The photoresistors each have a 1 kΩ resistor in series to act as a voltage divider, and the LEDs are all hooked up to a 330 Ω current-limiting resistor for protetction. The requirement for the control board was to have holes at most 50x100mm apart, but I shrunk it to 40x80mm without losing functionality. The ground and VCC are copper pours on opposite sides of the board rather than hand-routed traces, which certainly helped the size. After we ordered and tested the board, we found hanging it around an inch off the ground gave the most consistent black/white separation. Still, we ran into a few issues in extreme circumstances such as particularly bright external light, so I designed a cardboard light shield to reduce noise. After recalibration, it worked like a charm!
+This was the custom PCB. The robot's steering system takes input from a seven-channel photoresistor array that I personally designed and laid out as a custom PCB in KiCad. Each of the seven channels has a photoresistor and an LED to reduce noise from ambient light variations. The photoresistors each have a 1 kΩ resistor in series to act as a voltage divider, and the LEDs are all connected to a 330 Ω current-limiting resistor for protection. The requirement for the control board was to have holes at most 50×100 mm apart, but I shrank it to 40×80 mm without losing functionality. Ground and VCC use copper pours on opposite sides of the board rather than hand-routed traces, which helped reduce its size. After we ordered and tested the board, we found mounting it about an inch above the ground gave the most consistent black/white separation. Bright external light could still cause issues, so I designed a cardboard light shield to reduce noise. After recalibration, it worked reliably.
 
 <figure>
   <img src="/images/projects/line_robot-sch.png" alt="Seven-channel photoresistor sensor schematic">
@@ -68,7 +68,7 @@ This was the custom PCB. The robot's steering system takes input from a seven-ch
 
 ### Power
 
-The original design of the robot had the full system running on one 6V supply, but we found that the motor's power draw could sometimes spike and affect the arduino. To rectify this, we split the power system into two; a 9V battery to power the motor shield, and the original 6V battery to power the arduino itself. This was a win-win, as it both protected the arduino from brownouts and gave the motors more power headroom to pull from if needed.
+The original design ran the full system from one 6 V supply, but we found that motor-current spikes could affect the Arduino. We split the power system: a 9 V battery powered the motor shield, while the original 6 V battery powered the Arduino. This protected the controller from brownouts and gave the motors more power headroom.
 
 ### Controls 
 

@@ -2,26 +2,14 @@
   url: "/"
   side: left
 
-- title: "Portfolio"
+- title: "Projects"
   url: "/portfolio/"
   side: left
 
-- title: About me
-  url: "/about/"
-  side: left
-
-- title: Blog
-  url: "/blog/"
-  side: left
-  dropdown:
-  - title: "Blog Archive"
-    url: "/blog/archive/"
-    
-
-- title: "Search"
-  url: "/search/"
+- title: "GitHub"
+  url: "https://github.com/Ae0lis"
   side: right
 
-- title: "Contact"
-  url: "/contact/"
+- title: "Resume"
+  url: "/assets/docs/Ben_Robison_Resume.pdf"
   side: right
