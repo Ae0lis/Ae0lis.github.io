@@ -61,12 +61,6 @@ header: false
           <p>Designed a seven-channel sensor PCB, assembled the sensing hardware, and tuned the controller through a full-track finish.</p>
           <span class="home-card__link">Read the project &rarr;</span>
         </a>
-        <a class="home-card" href="https://github.com/huskyroboticsteam/HR-pi/blob/main/C_Code/SystemsTesting/Automation/dirtSample.c" target="_blank" rel="noopener noreferrer">
-          <span class="home-card__type">Embedded integration</span>
-          <h3>Husky Robotics</h3>
-          <p>Integrated time-of-flight and Hall-effect sensors into an automated rover auger sequence, alongside wiring, crimping, and soldering.</p>
-          <span class="home-card__link">View the code &rarr;</span>
-        </a>
       </div>
     </div>
   </div>
