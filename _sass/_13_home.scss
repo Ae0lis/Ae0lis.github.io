@@ -151,8 +151,7 @@
 .home-card__link {
 	display: inline-block;
 	border-bottom: 0;
-	text-decoration: underline;
-	text-underline-offset: 0.16em;
+	text-decoration: none;
 }
 
 @media #{$small-only} {
