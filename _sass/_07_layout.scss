@@ -46,8 +46,59 @@ body.video cite { color: #fff; }
 ------------------------------------------------------------------- */
 
 #navigation {
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.2);
-    box-shadow: 0 2px 3px 0 rgba(0,0,0,.2);
+    background: #fff;
+    border-bottom: 1px solid #dbe3ea;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(23,32,51,.08);
+    box-shadow: 0 1px 3px 0 rgba(23,32,51,.08);
+
+    .top-bar {
+        max-width: $row-width;
+        margin: 0 auto;
+        background: #fff;
+    }
+
+    .title-area,
+    .top-bar-section ul,
+    .top-bar-section li:not(.has-form) a:not(.button) {
+        background: #fff;
+    }
+
+    .site-brand {
+        height: 45px;
+        line-height: 45px;
+        padding: 0 rem-calc(15);
+        font-family: $header-font-family;
+        font-size: rem-calc(18);
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    .site-brand a {
+        color: #172033;
+        text-decoration: none;
+    }
+
+    .top-bar-section li:not(.has-form) a:not(.button) {
+        color: #263647;
+        font-weight: 700;
+    }
+
+    .top-bar-section li:not(.has-form) a:not(.button):hover,
+    .top-bar-section li:not(.has-form) a:not(.button):focus {
+        background: #e9eff5;
+        color: #172033;
+    }
+
+    .top-bar-section li.active:not(.has-form) > a:not(.button),
+    .top-bar-section li.active:not(.has-form) > a:not(.button):hover,
+    .top-bar-section li.active:not(.has-form) > a:not(.button):focus {
+        background: $secondary-color;
+        color: #fff;
+    }
+
+    .toggle-topbar.menu-icon a {
+        color: #263647;
+    }
 
     [class^='icon-']:before, [class*=' icon-']:before {
         margin-right: rem-calc(8);
@@ -267,26 +318,34 @@ body.video cite { color: #fff; }
 
 #footer-content p,
 #footer-content li {
-    font-size: rem-calc(13);
-    font-weight: 300;
+    font-size: rem-calc(14);
 }
 
 #footer {
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-top: rem-calc(38);
+    padding-bottom: rem-calc(28);
     background: $footer-bg;
     color: $footer-color;
-    }
+}
 
-    #footer a {
-        color: $footer-link-color;
-    }
-    #footer h4,
-    #footer h5 {
-        letter-spacing: 1px;
-        color: #fff;
-        text-transform: uppercase;
-    }
+#footer a {
+    color: $footer-link-color;
+    text-decoration: underline;
+    text-underline-offset: 0.16em;
+}
+
+#footer h2 {
+    margin: 0 0 rem-calc(10);
+    color: #fff;
+    font-family: $font-family-sans-serif;
+    font-size: rem-calc(14);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.site-footer__about p {
+    max-width: 32rem;
+}
 
 
 
@@ -296,20 +355,45 @@ body.video cite { color: #fff; }
 #subfooter {
     background: $subfooter-bg;
     color: $subfooter-color;
-    padding-top: 30px;
+    padding: rem-calc(18) 0;
 }
 
-#subfooter-left ul.inline-list {
-    float: left;
+#subfooter p {
+    margin: 0;
 }
 
 .credits a {
     color: $subfooter-link-color;
-    border: 0;
-    text-transform: uppercase;
+    text-decoration: underline;
     &:hover {
         color: #fff;
   }
+}
+
+.site-footer__top-link {
+    text-align: right;
+}
+
+.site-footer__top-link a {
+    color: $subfooter-link-color;
+    text-decoration: underline;
+    text-underline-offset: 0.16em;
+
+    &:hover,
+    &:focus {
+        color: #fff;
+    }
+}
+
+@media #{$small-only} {
+    .site-footer__about {
+        margin-bottom: rem-calc(20);
+    }
+
+    .site-footer__top-link {
+        margin-top: rem-calc(10);
+        text-align: left;
+    }
 }
 
 .social-icons {

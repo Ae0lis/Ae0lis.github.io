@@ -1,74 +1,43 @@
-    <div id="up-to-top" class="row">
-      <div class="small-12 columns" style="text-align: right;">
-        <a class="iconfont" href="#top-of-page">&#xf108;</a>
-      </div><!-- /.small-12.columns -->
-    </div><!-- /.row -->
+<footer id="footer-content" class="site-footer">
+  <div id="footer" class="site-footer__main">
+    <div class="row">
+      <section class="medium-6 large-6 columns site-footer__about" aria-labelledby="footer-about-heading">
+        <h2 id="footer-about-heading">{{ site.title }}</h2>
+        <p>{{ site.description }}</p>
+      </section>
 
+      <nav class="small-6 medium-3 large-3 columns" aria-labelledby="footer-contact-heading">
+        <h2 id="footer-contact-heading">Contact</h2>
+        <ul class="no-bullet">
+          {% for service_item in site.data.services %}
+            {% if service_item.name %}
+              <li><a href="{% if service_item.url contains 'http' or service_item.url contains 'mailto:' %}{{ service_item.url }}{% else %}{{ service_item.url | relative_url }}{% endif %}"{% if service_item.url contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ service_item.name }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
 
-    <footer id="footer-content" class="bg-grau">
-      <div id="footer">
-        <div class="row">
-          <div class="medium-6 large-5 columns">
-            <h5 class="shadow-black">{{ site.data.language.info_website }}</h5>
+      <nav class="small-6 medium-3 large-3 columns" aria-labelledby="footer-elsewhere-heading">
+        <h2 id="footer-elsewhere-heading">Elsewhere</h2>
+        <ul class="no-bullet">
+          {% for network_item in site.data.network %}
+            {% if network_item.name %}
+              <li><a href="{{ network_item.url }}" target="_blank" rel="noopener noreferrer">{{ network_item.name }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
 
-            <p class="shadow-black">
-              {{ site.description }}
-            </p>
-          </div><!-- /.large-6.columns -->
-
-
-          <div class="small-6 medium-3 large-3 large-offset-1 columns">
-            {% for service_item in site.data.services %}
-              {% if forloop.first == true %}
-                <h5 class="shadow-black">{{ service_item.menu_name }}</h5>
-              {% endif %}
-            {% endfor %}
-
-              <ul class="no-bullet shadow-black">
-              {% for service_item in site.data.services %}
-                {% if service_item.url contains 'http' or service_item.url contains 'mailto:' %}{% assign domain = '' %}{% else %}{% capture domain %}{{ site.url }}{{ site.baseurl }}{% endcapture %}{% endif %}
-                  <li {% if service_item.class %}class="{{ service_item.class }}" {% endif %}>
-                    <a href="{{ domain }}{{ service_item.url }}" {% if service_item.url contains 'http' %}target="_blank" {% endif %} title="{{ service_item.title }}">{{ service_item.name }}</a>
-                  </li>
-              {% endfor %}
-              </ul>
-          </div><!-- /.large-4.columns -->
-
-
-          <div class="small-6 medium-3 large-3 columns">
-            {% for network_item in site.data.network %}
-              {% if forloop.first == true %}
-                <h5 class="shadow-black">{{ network_item.menu_name }}</h5>
-              {% endif %}
-            {% endfor %}
-
-            <ul class="no-bullet shadow-black">
-            {% for network_item in site.data.network %}
-              {% if network_item.url contains 'http' %}{% assign domain = '' %}{% else %}{% capture domain %}{{ site.url }}{{ site.baseurl }}{% endcapture %}{% endif %}
-                <li {% if network_item.class %}class="{{ network_item.class }}" {% endif %}>
-                  <a href="{{ domain }}{{ network_item.url }}" {% if network_item.url contains 'http' %}target="_blank" {% endif %} title="{{ network_item.title }}">{{ network_item.name }}</a>
-                </li>
-            {% endfor %}
-            </ul>
-          </div><!-- /.large-3.columns -->
-        </div><!-- /.row -->
-
-      </div><!-- /#footer -->
-
-
-      <div id="subfooter">
-        <nav class="row">
-          <section id="subfooter-left" class="small-12 medium-6 columns credits">
-            {{ site.credits }}
-          </section>
-
-          <section id="subfooter-right" class="small-12 medium-6 columns">
-            <ul class="inline-list social-icons">
-            {% for social_item in site.data.socialmedia %}
-              <li><a href="{{ social_item.url }}" target="_blank" class="{{ social_item.class }}" title="{{ social_item.title }}"></a></li>
-            {% endfor %}
-            </ul>
-          </section>
-        </nav>
-      </div><!-- /#subfooter -->
-    </footer>
+  <div id="subfooter" class="site-footer__bottom">
+    <div class="row">
+      <div id="subfooter-left" class="small-12 medium-8 columns credits">
+        {{ site.credits }}
+      </div>
+      <div class="small-12 medium-4 columns site-footer__top-link">
+        <a href="#top-of-page">Back to top <span aria-hidden="true">&uarr;</span></a>
+      </div>
+    </div>
+  </div>
+</footer>

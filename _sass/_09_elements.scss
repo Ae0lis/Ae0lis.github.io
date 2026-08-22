@@ -14,6 +14,55 @@
 
 */
 
+.skip-link {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 1rem;
+  padding: .7rem 1rem;
+  background: #fff;
+  color: #172033;
+  border: 2px solid $secondary-color;
+  border-radius: 0 0 4px 4px;
+  transform: translateY(-120%);
+  transition: transform .15s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+
+main {
+  min-width: 0;
+}
+
+main h1,
+main h2,
+main h3,
+main p,
+main li {
+  overflow-wrap: break-word;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skip-link {
+    transition: none;
+  }
+}
+
 
 
 /* Table of Contents (Index)

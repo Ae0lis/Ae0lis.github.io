@@ -140,6 +140,7 @@
 .project-meta__item {
 	display: flex;
 	flex-direction: column;
+	min-width: 0;
 	line-height: 1.3;
 }
 
@@ -158,6 +159,7 @@
 .project-meta__val {
 	font-size: 0.92rem;
 	color: $body-font-color;
+	overflow-wrap: anywhere;
 }
 
 // Status badge
@@ -194,7 +196,15 @@
 
 // Keep the writeup readable — cap line length even though the column is wide
 .project-body {
+	width: 100%;
 	max-width: 46rem;
+	min-width: 0;
+	overflow-wrap: break-word;
+}
+
+.project-body pre {
+	max-width: 100%;
+	overflow-x: auto;
 }
 
 .project-grid > .project-card {
@@ -207,5 +217,20 @@
 
 	@media #{$small-only} {
 		flex-basis: calc(100% - 1.5rem);
+	}
+}
+
+@media #{$small-only} {
+	.project-meta {
+		align-items: flex-start;
+		gap: 0.9rem 1rem;
+	}
+
+	.project-meta__item {
+		flex: 1 1 9rem;
+	}
+
+	.project-meta__item--tech {
+		flex-basis: 100%;
 	}
 }

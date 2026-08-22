@@ -55,12 +55,12 @@ header: false
     <div class="small-12 columns">
       <p class="home-eyebrow">More hardware work</p>
       <div class="home-card-grid">
-        <a class="home-card" href="/projects/line_robot/">
+        <article class="home-card">
           <span class="home-card__type">PCB + controls</span>
-          <h3>Line-Following Robot</h3>
+          <h3><a href="/projects/line_robot/">Line-Following Robot</a></h3>
           <p>Designed a seven-channel sensor PCB, assembled the sensing hardware, and tuned the controller through a full-track finish.</p>
-          <span class="home-card__link">Read the project &rarr;</span>
-        </a>
+          <a class="home-card__link" href="/projects/line_robot/">Read the project <span aria-hidden="true">&rarr;</span></a>
+        </article>
       </div>
     </div>
   </div>
