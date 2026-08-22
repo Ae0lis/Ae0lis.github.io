@@ -39,7 +39,7 @@ header: false
           </div>
           <p class="home-project-links">
             <a class="button radius small" href="/projects/gemm_accelerator/">Read the project</a>
-            <a class="button radius small secondary" href="https://github.com/Ae0lis/Systolic-Array" target="_blank" rel="noopener noreferrer">View source</a>
+            <a class="button radius small secondary" href="https://github.com/Ae0lis/gemm-accelerator" target="_blank" rel="noopener noreferrer">View source</a>
           </p>
         </div>
         <div class="large-5 columns featured-project__image">

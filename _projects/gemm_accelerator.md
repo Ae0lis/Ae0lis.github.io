@@ -3,16 +3,16 @@ layout: project
 title: "8x8 GEMM Accelerator"
 tagline: "Hardware-verified INT8 matrix multiplication on a Cyclone V FPGA."
 order: 1
-status: "complete"
+status: "active"
 role: "RTL design + verification + HPS integration"
 organization: "Personal summer project"
-date_range: "Summer 2026"
+date_range: "Summer 2026 - Present"
 tech:
   - SystemVerilog
   - C
   - Python
   - Quartus Prime
-repo: "https://github.com/Ae0lis/Systolic-Array"
+repo: "https://github.com/Ae0lis/gemm-accelerator"
 demo: ""
 thumb: "projects/gemm-de1-soc.jpg"
 header_image: "projects/gemm-de1-soc.jpg"
@@ -26,7 +26,7 @@ category: "FPGA"
 
 I built an 8×8 signed-integer matrix-multiplication accelerator in synthesizable SystemVerilog and ran it on the Cyclone V FPGA of a DE1-SoC. The project covers the full path from RTL and verification to synthesis, timing analysis, memory-mapped integration, ARM-side software, and physical-board testing.
 
-The current implementation is a **result-stationary broadcast array** rather than a systolic array. On accumulation cycle `k`, the design broadcasts column `k` of A and row `k` of B; MAC `(i,j)` accumulates `A[i,k] * B[k,j]` into its local INT32 result.
+The current implementation is a **result-stationary broadcast array** rather than a systolic array. On accumulation cycle `k`, the design broadcasts column `k` of A and row `k` of B; MAC `(i,j)` accumulates `A[i,k] * B[k,j]` into its local INT32 result. The broadcast array is fully hardware-verified. In the future, I plan to make it into a systolic array to improve performance.
 
 ## Results
 
