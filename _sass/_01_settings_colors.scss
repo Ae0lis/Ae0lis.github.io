@@ -18,7 +18,7 @@
 
 $text-color         : #111;
 $body-font-color    : $text-color;
-$body-bg            : #fdfdfd;
+$body-bg            : #fbfcfe;
 
 
 
@@ -26,12 +26,12 @@ $body-bg            : #fdfdfd;
    https://color.adobe.com/de/Flat-Design-Colors-v2-color-theme-4341903/
 ------------------------------------------------------------------- */
 
-$ci-1               : #334D5C; // dark turquoise
-$ci-2               : #F7F7F7; // Almost White
-$ci-3               : #D9E3F0; // Light
-$ci-4               : #8B9DC3; // Lighter Blue
-$ci-5               : #3B5998; // Blue
-$ci-6               : #1B2A6D; // Navy
+$ci-1               : #274c5e; // slate blue
+$ci-2               : #f8fafc; // almost white
+$ci-3               : #dbe5ef; // light blue grey
+$ci-4               : #9eb1c4; // muted blue
+$ci-5               : #34598a; // blue
+$ci-6               : #1f3a6d; // navy
 
 
 
@@ -80,8 +80,8 @@ $topbar-dropdown-toggle-color: $ci-1;
 
 $topbar-link-color  : #000;
 $topbar-link-color-hover: #000;
-$topbar-link-color-active: #000;
-$topbar-link-color-active-hover: #000;
+$topbar-link-color-active: #fff;
+$topbar-link-color-active-hover: #fff;
 
 $topbar-dropdown-label-color: $ci-2;
 $topbar-dropdown-link-bg-hover: $ci-6;
@@ -107,14 +107,14 @@ $topbar-menu-icon-color-toggled: $ci-6;
 /* Footer
 ------------------------------------------------------------------- */
 
-$footer-bg          : $grey-8;
-$footer-color       : #fff;
-$footer-link-color  : $ci-6;
+$footer-bg          : #233044;
+$footer-color       : #f8fafc;
+$footer-link-color  : #f0f6ff;
 
 
-$subfooter-bg       : $grey-13;
-$subfooter-color    : $grey-8;
-$subfooter-link-color: $grey-8;
+$subfooter-bg       : #172033;
+$subfooter-color    : #cbd5e1;
+$subfooter-link-color: #f8fafc;
 
 
 
