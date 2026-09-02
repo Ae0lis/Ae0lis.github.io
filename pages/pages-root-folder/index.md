@@ -49,17 +49,3 @@ header: false
     </div>
   </div>
 </section>
-
-<section class="home-section home-section--muted">
-  <div class="row">
-    <div class="small-12 columns">
-      <p class="home-eyebrow">More hardware work</p>
-      <div class="home-card-grid">
-        <a class="home-card" href="/projects/line_robot/">
-          <span class="home-card__type">PCB + controls</span>
-          <h3>Line-Following Robot</h3>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
