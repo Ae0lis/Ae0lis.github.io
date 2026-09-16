@@ -3,10 +3,10 @@ layout: project
 title: "8×8 GEMM Accelerator"
 tagline: "Hardware-verified INT8 matrix multiplication on a Cyclone V FPGA."
 order: 1
-status: "active"
+status: "paused"
 role: "RTL design + verification + HPS integration"
 organization: "Personal summer project"
-date_range: "Summer 2026 - Present"
+date_range: "Summer 2026"
 tech:
   - SystemVerilog
   - C
@@ -72,4 +72,4 @@ Speaking of which, time to talk about how I went about building this. I started 
 
 Once I had the basics in place, it was time to build the array. I created a MAC array to do the calculations, then made some RAM blocks and designed the hardware to support the two. I ended up using the lightweight bridge for simplicity’s sake, so I had to design an Avalon-MM slave to receive inputs from the ARM core and funnel them into the MAC array. Due to having to send a column of A and a row of B, I found it easier to just store A transposed in the first place so I could use the same hardware for both arrays. A bit of timing wizardry and debugging later, and I had a broadcast array running correctly on the **physical FPGA**!
 
-Typing it out now, it sounds so easy! In reality, this project took me two months. Granted, I was working 40 hours a week so I could only work on it in the evenings and weekends, but it was seriously tricky at some points! By far the worst hurdle was just figuring out what to even do next. I hadn’t ever built something like this when I started - the closest I had done was making ‘Dancing with your Thumbs’ (writeup in progress, but you can find the GitHub repository [here](https://github.com/Ae0lis/dancing-with-your-thumbs)). Researching this, reading papers about what architecture was the best, and making all the design decisions myself was a really fun experience. I definitely learned a ton, especially about embedded C and software-to-hardware interfaces. Overall, I really enjoyed this project, and I look forward to whatever comes next!
+Typing it out now, it sounds so easy! In reality, this project took me two months. Granted, I was working 40 hours a week so I could only work on it in the evenings and weekends, but it was seriously tricky at some points! By far the worst hurdle was just figuring out what to even do next. I hadn’t ever built something like this when I started - the closest I had done was making ‘Dancing with your Thumbs’ (writeup [here](https://ae0lis.github.io/projects/dwyt/)). Researching this, reading papers about what architecture was the best, and making all the design decisions myself was a really fun experience. I definitely learned a ton, especially about embedded C and software-to-hardware interfaces. Overall, I really enjoyed this project, and I look forward to whatever comes next!
