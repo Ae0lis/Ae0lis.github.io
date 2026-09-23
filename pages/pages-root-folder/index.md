@@ -12,7 +12,7 @@ header: false
     <div class="large-8 columns">
       <p class="home-eyebrow">UW Electrical &amp; Computer Engineering</p>
       <h1>Ben Robison</h1>
-      <p class="home-lead">I build digital hardware and embedded systems, from synthesizable RTL through board-level integration and verification.</p>
+      <p class="home-lead">Hey there, I'm Ben! I build digital hardware and embedded systems, from synthesizable RTL through board-level integration and verification. I have a focus on FPGA work, but I'm interested in anything digital.</p>
       <div class="home-actions">
         <a class="button radius" href="/portfolio/">View projects</a>
         <a class="button radius secondary" href="/assets/docs/Ben_Robison_Resume.pdf">Resume (PDF)</a>
